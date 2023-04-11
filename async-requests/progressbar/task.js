@@ -8,7 +8,7 @@ form.addEventListener('submit', function(event) {
     const xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://students.netoservices.ru/nestjs-backend/upload');
 
-    xhr.onprogress = function(event) {        
+    xhr.upload.onprogress = function(event) {        
         progress.value = (event.loaded / event.total).toFixed(3);
     };
 
